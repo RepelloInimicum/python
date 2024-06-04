@@ -24,8 +24,71 @@ O vídeo apresenta desafios de programação em Python, incentivando os espectad
 O instrutor destaca a importância do apoio dos espectadores para a continuidade e aprimoramento do curso de Python, enfatizando a qualidade e diferenciais do conteúdo oferecido. Ele ressalta a necessidade de suporte financeiro para manter a estrutura e a produção do curso. O curso de Python oferece diversas metas, desde aulas e desafios até soluções e cursos avançados, prometendo um conteúdo completo e diferenciado. O instrutor destaca a qualidade do curso, com didática, animações e gamificação, ressaltando a diferença em relação a outros tutoriais disponíveis gratuitamente. O apoio financeiro dos espectadores é essencial para manter a qualidade e a continuidade do curso, devido aos custos envolvidos na produção e estrutura do conteúdo.
 """
 
+# Conjuntos de caracteres são delimitados por aspas simples ou duplas (depende do contexto).
+# Todos os comandos em Python são funções. Funções utilizam parênteses para indicar os parâmetros para executar suas ações
+print('Olá, Mundo!')
+
+# Neste exemplo, print() é a função e 'Olá, Mundo' é o argumento da função, ou seja, a ação que a função deve realizar. O print exibe na tela o texto especificado.
+
+# A sintaxe, portanto é: O nome da função, parêntese de abertura, abertura de aspa (simples ou dupla), caracteres desejados para formar a palavra, frase e etc, podendo também ser nenhum caractere, aspa de fechamento que sinaliza o fim da cadeia de caracteres e o parêntese de fechamento, que conclui a função
+
+# Se omitirmos um dos parêntes, uma das aspas ou ambas e etc, o Python retorna um erro de sintaxe, ou seja, é um erro por ferir uma regra para construção das sentenças. "SyntaxError: invalid syntax"
+
+print(7 + 4)  # Obtemos o resultado 11
+print('7' + '4')  # Obtemos o resultado '74'
+
+# Dados numéricos (sem aspas) são diferentes de caracteres numéricos entre aspas. Por exemplo, 7 + 4 é diferente de '7' + '4'
+# Com isso concluímos que o operador + quando utilizado com conjuntos de caracteres delimitados por aspas tem a função de unir os dados
+# Quando o operador + é utilizado com dados numéricos ele funciona como o operador matemático de soma
+
+# O operador + não funciona com dados de tipos diferentes.
+# print('Olá' + 5) retornaria um erro TypeError, que indica que estamos utilizando um dado de um tipo não válido para executar determinada ação. Neste caso estamos somando uma palavra com um número.
+
+# Dados diferentes podem ser unidos utilizando a vírgula como separador
+print('Olá', 5)  # Obtemos 'Olá 5'
+
+# Nota: Por questão de legibilidade utilizamos um espaço após a vírgula para separar os argumentos, mas ele não é realmente necessário e não interfere na exibição. O espaço exibido no resultado é causado pelo argumento opcional da função print sep que por padrão é um espaço. Argumentos opcionais ficam ocultos, pois possuem um valor padrão.
+
+# Se quisermos reutilizar algum dado em nosso programa, devemos guardar este valor em uma variável. Toda variável é um objeto!
+# Nossas variáveis devem receber um nome. Por questões de boas práticas, existem regras para nomear variáveis, como utilizar letras minúsculas, dar nomes autoexplicativos e etc
+
+# Uma variável passa a existir a partir do momento que é criada e tem um valor atribuído. A sintaxe da criação de uma variável é nome da variável, um operador de atribuição = e o valor desejado.
+
+nome = 'Guanabara'
+idade = 25
+peso = 75.8
+
+# O sinal de igual pode ser lido como "recebe" para deixar sua função intuitiva.
+
+# Podemos mostrar o valor guardado em uma variável, chamando seu nome.
+print(nome, idade, peso)  # Obtemos Guanabara 25 75.8
+
+# Nota: Neste exemplo temos três valores de tipos diferentes, portanto não podemos utilizar o operador +
+
+# Variáveis, como o nome sugere, são entidades dinâmicas. Isso significa que podemos atualizar seus valores. Uma das formas de fazer isso é adicionando interatividade com o usuário, combinando a criação da variável com uma função especial chamada input que significa ler um valor
+
+nome = input('Digite o seu nome: ')
+idade = input('Digite a sua idade: ')
+peso = input('Digite o seu peso: ')
+
+# A função input possui um argumento chamado mensagem de prompt, que é a mensagem que será exibida para o usuário. Ao executar o programa, o usuário irá digitar no teclado o valor que deseja atribuir para aquela variável.
+
+# Após isso podemos manipular este valor da forma que desejarmos.
+print(f'Olá, {nome}. Você tem {idade} anos e pesa {peso}Kg.')
+
 # Desafio 01 - Crie um script Python que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas conforme o valor digitado.
+nome = input('Digite o seu nome para visualizar a mensagem: ')
+print(f'Olá, {nome}! Seja bem-vindo.')
 
 # Desafio 02 - Crie um script Python que leia o dia, o mês e o ano de nascimento de uma pessoa e mostre uma mensagem com a data formatada.
+dia = input('Digite o dia do seu nascimento: ')
+mês = input('Digite o mês do seu nascimento: ')
+ano = input('Digite o ano do seu nascimento: ')
+print(f'Sua data de nascimento é: {dia}/{mês}/{ano}')
 
 # Desafio 03 - Crie um script Python que leia dois números e tente mostrar a soma entre eles.
+primeiro = int(input('Digite o primeiro valor: '))
+segundo = int(input('Digite o segundo valor: '))
+print(f'Vamos somar! {primeiro} + {segundo} = {primeiro + segundo}')
+
+# O valor padrão retornado pela função input, independente de ser digitado um caractere alfabético ou numérico será um dado do tipo string (str). Para receber o valor do input e conseguir somar e não concatenar, devemos converter o caractere para o tipo inteiro (int) se possível (Caso seja digitado um caractere alfabético um erro será exibido). A função int() é a responsável pela conversão
