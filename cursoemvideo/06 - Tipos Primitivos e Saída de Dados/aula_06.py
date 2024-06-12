@@ -17,3 +17,39 @@ O vídeo aborda a utilização de formatos de strings em Python, destacando a si
 
 O vídeo aborda a resolução de desafios de programação, incentivando a prática e a criatividade na resolução de exercícios utilizando tipos primitivos. Além disso, destaca a importância do apoio dos espectadores para manter a qualidade do conteúdo produzido. A importância da prática e criatividade na resolução de desafios de programação utilizando tipos primitivos. Incentivo para os espectadores apoiarem o canal para manter a qualidade do conteúdo produzido e ajudar toda a comunidade.
 """
+
+# Neste exemplo, utilizamos dois inputs para receber um valor digitado pelo teclado. Os valores são guardados em variáveis para serem utilizados posteriormente
+n1 = input('Digite um número: ')
+n2 = input('Digite mais um número: ')
+
+# Uma variável intermediária é criada e armazena o valor de uma operação.
+s = n1 + n2
+
+# Ao exibir o resultado, um erro semântico é apresentado. Ou seja, o programa executa a tarefa, porém o resultado não é o esperado O intuito da operação era somar dois valores numéricos, mas o resultado não é esse.
+print(f'A soma vale {s}')
+
+# Isso ocorreu, pois os dados recebido por um input, por padrão são do tipo string, mesmo que um número seja digitado. O operador +, quando utilizado em operações envolvendo dados do tipo string age como um concatenador, ou seja, ele une os caracteres. Mesmo que números sejam digitados, ele não age como seu irmão matemático.
+
+# Para solucionar isso e utilizar os dados do input como números e poder realizar operações matemáticas, é necessário antes converter os tipos de dados. Em nosso exemplo, isso pode ser feito utilizando a função int() com o input como argumento. Assim os dados salvos nas variáveis serão do tipo inteiro (A conversão só ocorre se a string digitada for numérica)
+
+# A versão atualizada do programa seria:
+n1 = int(input('Digite um número: '))
+n2 = int(input('Digite outro número: '))
+print(f'A soma entre {n1} e {n2} é {n1 + n2}')
+
+# Os quatro dados primitivos são int (números inteiros), float (números com parte decimal), bool (valores lógicos que representam verdadeiro/True ou falso/False, algo ou zero/vazio) e str (string, que são cadeias de caracteres entre aspas, podendo ser inclusive zero caracteres)
+
+# f-strings são o método mais moderno para combinar strings e variáveis. Utilizamos um f antes da abertura das aspas para indicar uma f string e dentro da string, utilizamos chaves para posicionar as variáveis
+
+# Quando não temos certeza do tipo de dado que estamos trabalhando, podemos utilizar a função type(). Em combinação com a função print, podemos visualizar o tipo de dado fornecido
+print(type(n1))
+
+# <class 'int'> é exibido
+
+# Dados do tipo string possuem métodos de verificação
+dado_str = input('Digite algo: ')
+print(dado_str.upper())
+
+# O método upper() converte todos os caracteres da string para maiúsculo. Existem outros métodos que podem ser utilizados, como lower() que converte para minúsculo, title() que converte para o formato de título (primeira letra de cada palavra em maiúscula) e capitalize() que converte a primeira letra da string para maiúscula.
+
+# Podemos indicar o tipo de uma variável ao criá-la, utilizando a sintaxe var:tipo = valor. Isso é chamado de tipagem explícita. Em Python, a tipagem é dinâmica, ou seja, o tipo de dado é definido no momento em que a variável é criada. A tipagem explícita é utilizada para indicar o tipo de dado que a variável irá armazenar, porém, não é necessário, pois o Python é capaz de inferir o tipo de dado a partir do valor atribuído. Essa tipagem explícita não converte o valor atribuído, apenas indica o tipo de dado que a variável irá armazenar. Se o valor atribuído não for compatível com o tipo indicado, um erro será gerado.

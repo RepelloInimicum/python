@@ -6,3 +6,6 @@ nome = input('Digite o seu nome: ').strip().title()
 
 # Exibimos o resultado formatado
 print(f'Olá, {nome}. Seja muito bem-vindo!')
+
+# Utilizamos o método strip() para remover espaços em branco no início e no final da string.
+# Utilizamos o método title() para deixar a primeira letra de cada palavra em maiúscula.
