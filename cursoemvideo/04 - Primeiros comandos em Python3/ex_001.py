@@ -3,7 +3,7 @@
 """Nesse vídeo, mostraremos como criar um projeto Python no PyCharm e deixar tudo preparado para receber os exercícios da série, que vão utilizar o mesmo projeto.
 """
 
-# Desafio 0001 - Aula 4 - Crie um programa que escreva "Olá, Mundo!" na tela.
+# Desafio 001 - Aula 4 - Crie um programa que escreva "Olá, Mundo!" na tela.
 
 # Exibindo a mensagem diretamente com uma instrução, print
 print('Olá, Mundo!')
